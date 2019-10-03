@@ -87,6 +87,10 @@ int main() {
 				cout << "Input Again Please" << endl;
 				cin >> n;
 			}
+			while (arr[n - 1] == 'X') {
+				cout << "Player 2 Has Already Marked Here, Please Input Again" << endl;
+				cin >> n;
+			}
 			arr[n - 1] = 'O';
 			k = checkwin(arr, size);
 			board(arr, size);
@@ -103,6 +107,10 @@ int main() {
 			while (n < 1 || n > 9) {
 				cout << "Please Limit Your Input from 1 - 9 " << endl;
 				cout << "Input Again Please" << endl;
+				cin >> n;
+			}
+			while (arr[n - 1] == 'O') {
+				cout << "Player 1 Has Already Marked Here, Please Input Again" << endl;
 				cin >> n;
 			}
 			arr[n - 1] = 'X';
